@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* design navebar */
+nav{
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 0px 50px 0px 50px !important;
+    background-color: #FFEFDA;
+}
+.navbar-brand img{
+    width: 85px ;
+}
+.disabled{
+    border: 2px solid #1eb5ea;
+    border-radius: 10px;
+    text-align: center;
+    color: #4b4848 !important;
+}
+.navbar-nav  li a{
+    color: #4b4848;
+    font-weight: bold;
+    margin-left: 45px;
+}
+.navbar-nav  li a:hover{
+    color: #1eb5ea;
+}
+.dropdown-menu{
+    margin-left: 50px;
+    background-color:#FFEFDA;
+    border: none;
+    border: 2px solid #4b4848;
+}
+.dropdown-menu .dropdown-item:hover{
+    color: #1eb5ea;
+    background: none;
+}
+.dropdown-item{
+    text-align: left;
+    padding-right: 50px;
+}
