@@ -1,3 +1,41 @@
+@media only screen and (max-width:1400px){
+    .carousel-container {
+        height: 100% !important; /* adjust the height to your desired value */
+        width: 60% !important; /* adjust the width to your desired value */
+      }
+      .carousel-inner .carousel-caption{
+        margin-bottom: -10px; 
+        background-color: #b4afaf8c;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .primary-btn{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:1200px){
+    .carousel-container {
+        height: 100%; /* adjust the height to your desired value */
+        width: 60%; /* adjust the width to your desired value */
+      }
+      .carousel-inner .carousel-caption{
+        background-color: #b4afaf8c;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .banner-header{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .banner-subheader{
+        font-size: 20px;
+    }
+    .banner-des{
+    font-size: 14px;
+    }
+}
+
 @media only screen and (max-width:991px){
     nav{
       padding: 0px 10px 0px 10px !important;
@@ -8,5 +46,56 @@
   }
   .dropdown-menu{
     margin-left: 0px !important;
+  }
+  .banner-subheader{
+    font-size: 20px;
+  }
+  .banner-des{
+    font-size: 16px;
+  }
+  .banner-header{
+    font-size: 14px;
+  }
 }
+
+@media only screen and (max-width:768px){
+    .carousel-container {
+        height: 100%; /* adjust the height to your desired value */
+        width: 80%; /* adjust the width to your desired value */
+      }
+      .carousel-inner .carousel-caption{
+        background-color: #b4afaf8c;
+        border-radius: 2px;
+    }
+    .banner-header{
+        font-size: 14px;
+      }
+    .banner-subheader{
+        font-size: 20px;
+      }
+      .banner-des{
+        font-size: 12px;
+      }
+}
+
+@media only screen and (max-width:576px){
+    .carousel-container {
+        height: 100%; 
+        width: 80%; 
+      }
+      .carousel-inner .carousel-caption{
+        background-color: #b4afaf8c;
+        border-radius: 5px;
+    }
+    .banner-header{
+        font-size: 14px;
+        margin-bottom: -5px;
+      }
+    .banner-subheader{
+        font-size: 14px;
+        margin-bottom: -5px;
+      }
+      .banner-des{
+        font-size: 12px;
+      }
 }

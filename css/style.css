@@ -7,7 +7,20 @@
 nav{
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
     padding: 0px 50px 0px 50px !important;
-    background-color: #FFEFDA;
+}
+:root{
+    --bangla-font:'Baloo Da 2', cursive;
+}
+.primary-btn{
+    color: #fff !important;
+    font-weight: bold;
+    background-color: #1eb5ea;
+    border: none;
+}
+.primary-btn:hover{
+    background-color: #1da1d1;
+    transform: scale(1.02);
+    transition: 0.5s;
 }
 .navbar-brand img{
     width: 85px ;
@@ -39,4 +52,18 @@ nav{
 .dropdown-item{
     text-align: left;
     padding-right: 50px;
+}
+
+/* slider */
+.carousel-container {
+    max-width: 78% !important; 
+}
+.banner-header,.banner-subheader{
+    font-family: var(--bangla-font);
+}
+.carousel-inner .carousel-caption{
+    margin-bottom: 100px; 
+    background-color: #b4afaf8c;
+    /* padding: 100px; */
+    border-radius: 5px;
 }
