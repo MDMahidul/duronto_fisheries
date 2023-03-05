@@ -1,4 +1,5 @@
 @media only screen and (max-width:1400px){
+  
     .carousel-container {
         height: 100% !important; /* adjust the height to your desired value */
         width: 60% !important; /* adjust the width to your desired value */
@@ -15,6 +16,7 @@
 }
 
 @media only screen and (max-width:1200px){
+
     .carousel-container {
         height: 100%; /* adjust the height to your desired value */
         width: 60%; /* adjust the width to your desired value */
@@ -34,12 +36,14 @@
     .banner-des{
     font-size: 14px;
     }
+ 
 }
 
 @media only screen and (max-width:991px){
     nav{
       padding: 0px 10px 0px 10px !important;
   }
+
   .navbar-nav  li a{
     margin-left: 0px !important;
     margin-bottom: 10px;
@@ -59,6 +63,7 @@
 }
 
 @media only screen and (max-width:768px){
+
     .carousel-container {
         height: 100%; /* adjust the height to your desired value */
         width: 80%; /* adjust the width to your desired value */
@@ -79,6 +84,9 @@
 }
 
 @media only screen and (max-width:576px){
+  .contact-section{
+    padding: 0px 20px 15px 20px !important;
+}
     .carousel-container {
         height: 100%; 
         width: 80%; 

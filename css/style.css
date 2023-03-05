@@ -8,6 +8,9 @@ nav{
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
     padding: 0px 50px 0px 50px !important;
 }
+.contact-section{
+    margin: 0px 40px 15px 40px ;
+}
 :root{
     --bangla-font:'Baloo Da 2', cursive;
 }
@@ -66,4 +69,40 @@ nav{
     background-color: #b4afaf8c;
     /* padding: 100px; */
     border-radius: 5px;
+}
+
+
+/* shop page design */
+.products .card-title,.card-text{
+    font-family: var(--bangla-font) !important;
+   
+}
+.products .card-text{
+    font-family: var(--bangla-font) !important;
+    font-weight: 500;
+    
+}
+.products .card-title {
+    color: #1da1d1 !important;
+    font-weight: 600;
+}
+.page-header{
+    font-family: var(--bangla-font);
+    font-weight: 600;
+    padding-top: 85px !important;
+}
+.page-subheader{
+    font-family: var(--bangla-font);
+    font-weight: 600;
+}
+
+/* contact page style */
+
+.contact .address{
+    font-family: var(--bangla-font) !important;
+    font-weight: 500;
+}
+.fa-solid{
+    margin-right: 5px;
+    color: #1eb5ea !important;
 }

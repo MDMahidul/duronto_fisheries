@@ -4,6 +4,7 @@
     include_once 'db.php';
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,31 +24,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>Contact Page</title>
+    <title>Shop</title>
 </head>
 <body>
     <?php include "sections/header.php" ?>
- 
-    <section class="contact-section w-75 mx-auto">
-       <h1 class="text-center my-5 pt-5 page-header">আমাদের সাথে যোগাযোগ করুন</h1>
-       <div class="row">
-        <div class="col-md-4 col-12 con-header contact">
-          <h5 class="border-bottom page-subheader" id="con-header">যোগাযোগের ঠিকানা</h5>
+
+    <h1 class="text-center mt-5 pt-5 page-header">মাছ কিনুন</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php
-                $sql = "SELECT * FROM contact";
+                $sql = "SELECT * FROM products";
                 $result = mysqli_query($conn, $sql);
 
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)){
-                        echo "
-                          <div>
-                            <p class='address'><i class='fa-solid fa-location-dot'></i> ".$row['address']."</p>
-                            <p class='address'><i class='fa-solid fa-envelope'></i></i> ".$row['email']."</p>
-                            <p class='address'><i class='fa-solid fa-mobile-screen-button'></i></i> ".$row['phone']."</p>
-                            <p class='address'><i class='fa-solid fa-phone'></i></i></i> ".$row['phone_2']."</p>
-                          </div>
-                        ";
-                      }
+                        echo "<div class='col'>
+                                <div class='card products'>
+                                    <img src=".$row['p_img']." class='card-img-top' alt='...' >
+                                    <div class='card-body'>
+                                        <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                                        <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>
+                                        <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
+                                        <form action='order.php' method='post'>
+                                        <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
+                                        <input type='hidden' name='id' value='".$row['id']."'/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>";
+                }
                     }else {
                         echo "0 results";
                     }
@@ -55,8 +59,6 @@
                     mysqli_close($conn);
             ?>
         </div>
-       </div>
-    </section>
     
     
     <?php include "sections/footer.php" ?>
