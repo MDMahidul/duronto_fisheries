@@ -55,6 +55,34 @@
                     mysqli_close($conn);
             ?>
         </div>
+        <div class="col-md-4 col-12 con-header contact">
+          <h5 class="border-bottom page-subheader" id="con-header">গুগোল ম্যাপে আমাদের ঠিকানা</h5>
+          <div class="map-container">
+            <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.20799912536305!2d90.41148944390626!3d23.771332124484033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c75ee3158299%3A0xe7fb8d54825fe7bb!2sOSCL%20-%20Overseas%20Study%20Counseling%20Ltd.!5e0!3m2!1sen!2sbd!4v1677474754730!5m2!1sen!2sbd"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 con-header contact">
+          <h5 class="border-bottom page-subheader" id="con-header">আপনার পরিচয় দিন</h5>
+          <form>
+            <div class="form-group contact-form">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label fw-bold">নাম</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="আপনার নাম লিখুন">
+              </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label fw-bold">ই-মেইল</label>
+                <input type="email" class="form-control" id="formGroupExampleInput" placeholder="আপনার ই-মেইল লিখুন">
+              </div>
+             
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label fw-bold">মোবাইল নাম্বার</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="আপনার মোবাইল নাম্বার লিখুন">
+              </div>
+            </div>
+            
+            <button type="submit" class="btn primary-btn">সেন্ড করুন</button>
+          </form>
+        </div>
        </div>
     </section>
     

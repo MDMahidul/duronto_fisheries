@@ -30,7 +30,7 @@
     <?php include "sections/header.php" ?>
 
     <h1 class="text-center mt-5 pt-5 page-header">মাছ কিনুন</h1>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
         <?php
                 $sql = "SELECT * FROM products";
                 $result = mysqli_query($conn, $sql);
@@ -39,7 +39,9 @@
                     while($row = mysqli_fetch_assoc($result)){
                         echo "<div class='col'>
                                 <div class='card products'>
-                                    <img src=".$row['p_img']." class='card-img-top' alt='...' >
+                                    <div class='text-center'>
+                                    <img src=".$row['p_img']." class='card-img-top w-75' alt='...' >
+                                    </div>
                                     <div class='card-body'>
                                         <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
                                         <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>

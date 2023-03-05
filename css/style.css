@@ -41,6 +41,8 @@ nav{
 }
 .navbar-nav  li a:hover{
     color: #1eb5ea;
+    border-bottom: 2px solid #1eb5ea;
+    transform: scale(1.03);
 }
 .dropdown-menu{
     margin-left: 50px;
@@ -51,6 +53,7 @@ nav{
 .dropdown-menu .dropdown-item:hover{
     color: #1eb5ea;
     background: none;
+    border: none;
 }
 .dropdown-item{
     text-align: left;
@@ -90,10 +93,12 @@ nav{
     font-family: var(--bangla-font);
     font-weight: 600;
     padding-top: 85px !important;
+    padding-bottom: 45px !important;
 }
 .page-subheader{
     font-family: var(--bangla-font);
     font-weight: 600;
+    margin-bottom: 15px;
 }
 
 /* contact page style */
@@ -105,4 +110,38 @@ nav{
 .fa-solid{
     margin-right: 5px;
     color: #1eb5ea !important;
+    font-size: 18px;
 }
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 55vh;
+    border: none;
+  }
+  .map-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+/* form style */
+form{
+    font-family: var(--bangla-font);
+}
+.form-control{
+    border: none;
+    border-bottom: 1px solid #4b4848;
+    border-radius: 0px;
+    box-shadow: none !important;
+}
+ input::placeholder .contact-form{
+    color: #4b4848;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+  }
