@@ -9,10 +9,14 @@ nav{
     padding: 0px 50px 0px 50px !important;
 }
 .contact-section{
-    margin: 0px 40px 15px 40px ;
-}
+    margin-bottom: 80px !important;
+} 
 :root{
     --bangla-font:'Baloo Da 2', cursive;
+}
+.bangla-font{
+    font-family: var(--bangla-font);
+    font-weight: 500;
 }
 .primary-btn{
     color: #fff !important;
@@ -103,9 +107,16 @@ nav{
 
 /* contact page style */
 
-.contact .address{
+.contact .address, .about-text{
     font-family: var(--bangla-font) !important;
     font-weight: 500;
+    font-size: 18px;
+}
+.about-text{
+    font-family: var(--bangla-font) !important;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 100px !important;
 }
 .fa-solid{
     margin-right: 5px;
@@ -132,7 +143,7 @@ nav{
 form{
     font-family: var(--bangla-font);
 }
-.form-control{
+.form-input-field{
     border: none;
     border-bottom: 1px solid #4b4848;
     border-radius: 0px;
@@ -144,4 +155,11 @@ form{
 input:focus {
     outline: none;
     box-shadow: none;
+  }
+  .lable-right{
+    text-align: right !important;
+  }
+  .main-address{
+    margin: auto;
+    padding-bottom: 25px;
   }

@@ -5,6 +5,7 @@
 
 ?>
 
+<?php include "sections/header.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,48 +25,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>Shop</title>
+    <title>About us</title>
 </head>
 <body>
-    <?php include "sections/header.php" ?>
+<h1 class="text-center mt-5 pt-5 page-header">মাছ কিনুন</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4 px-5">
+    <?php
+            $sql = "SELECT * FROM products";
+            $result = mysqli_query($conn, $sql);
 
-    <h1 class="text-center mt-5 pt-5 page-header">মাছ কিনুন</h1>
-    <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
-        <?php
-                $sql = "SELECT * FROM products";
-                $result = mysqli_query($conn, $sql);
-
-                if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        echo "<div class='col'>
-                                <div class='card products'>
-                                    <div class='text-center'>
-                                    <img src=".$row['p_img']." class='card-img-top w-75' alt='...' >
-                                    </div>
-                                    <div class='card-body'>
-                                        <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
-                                        <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>
-                                        <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
-                                        <form action='order.php' method='post'>
-                                        <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
-                                        <input type='hidden' name='id' value='".$row['id']."'/>
-                                        </form>
-                                    </div>
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "<div class='col'>
+                            <div class='card products'>
+                                <div class='text-center'>
+                                <img src=".$row['p_img']." class='card-img-top w-75' alt='...' >
                                 </div>
-                            </div>";
+                                <div class='card-body'>
+                                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                                    <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>
+                                    <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
+                                    <form action='order.php' method='post'>
+                                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
+                                    <input type='hidden' name='id' value='".$row['id']."'/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>";
+            }
+                }else {
+                    echo "0 results";
                 }
-                    }else {
-                        echo "0 results";
-                    }
-                    
-                    mysqli_close($conn);
-            ?>
-        </div>
-    
-    
-    <?php include "sections/footer.php" ?>
+                
+                mysqli_close($conn);
+        ?>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<?php include "sections/footer.php" ?>
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- MDB JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>

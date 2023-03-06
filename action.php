@@ -1,4 +1,10 @@
 
+<!-- db connection -->
+<?php
+
+include_once 'db.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,50 +28,47 @@
     <title>About us</title>
 </head>
 <body>
-<nav class=" navbar navbar-expand-lg fixed-top bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="img/ficon.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav  ms-auto">
-        <li class="nav-item">
-          <a class="nav-link"  href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="shop.php">Shop</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categories
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Rui</a></li>
-            <li><a class="dropdown-item" href="#">Katla</a></li>
-            <li><a class="dropdown-item" href="#">Silver Carp</a></li>
-            <li><a class="dropdown-item" href="#">Tilapia</a></li>
-            <li><a class="dropdown-item" href="#">Kalibaus</a></li>
-            <li><a class="dropdown-item" href="#">Hilsa</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link disabled text-dark" href="#"><i class="fa-solid fa-phone me-2"></i>+8809611-600500</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php
+if(isset($_POST['submit'])){
+    //$id = $_POST['id'];
+    $name = $_POST['c_name'];
+    $mail   = $_POST['c_mail'];
+    $phone = $_POST['c_phone'];
+    /* validation check */
+    if($name != "" && $mail != "" && $phone != ""){ 
+      $sql3 = "INSERT INTO customer_info values('','$name','$mail','$phone')";
+      $data = mysqli_query($conn,$sql3);
+      if($data){?>
+
+        <script>
+           new swal({ title: "আপনার পরিচয় দেয়ার জন্য ধন্যবাদ!",
+            text: "আমাদের সাথেই থাকুন!",
+            type: "success"}).then(okay => {
+            if (okay) {
+                window.location.href = "contact.php";
+            }
+            });
+        </script>
+        <?php
+        // header("Location:contact.php");
+        }else
+        echo "fail";
+    }
+}else{
+    echo '<script>alert("সব গুলো ঘর পূরণ করুন")</script>';
+}
+
+?>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- MDB JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
   </body>
 </body>
 </html>
+

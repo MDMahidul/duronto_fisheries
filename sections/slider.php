@@ -1,7 +1,7 @@
 <div id="demo" class="carousel slide mx-auto" data-bs-ride="carousel">
     <!-- The slideshow/carousel -->
     <div class="carousel-inner w-75 mx-auto">
-      <div class="carousel-item active" data-bs-interval="3000">
+      <div class="carousel-item active" data-bs-interval="2000">
         <img src="img/slider1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
         <div class="carousel-caption ">
             <h3 class="banner-header">সাশ্রয়ী দামে সেরা মাছ কিনতে </h3>
@@ -10,7 +10,7 @@
             <button class="btn primary-btn btn-text" onclick="location.href = 'contact.html';">BUY NOW</button>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="3000">
+      <div class="carousel-item" data-bs-interval="2000">
         <img src="img/slider2.jpg" alt="Chicago" class="d-block" style="width:100%">
         <div class="carousel-caption ">
             <h3 class="banner-header">সাশ্রয়ী দামে সেরা মাছ কিনতে </h3>
@@ -19,7 +19,7 @@
             <button class="btn primary-btn btn-text" onclick="location.href = 'contact.html';">BUY NOW</button>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="3000">
+      <div class="carousel-item" data-bs-interval="2000">
         <img src="img/slider3.jpg" alt="New York" class="d-block" style="width:100%">
         <div class="carousel-caption ">
             <h3 class="banner-header">সাশ্রয়ী দামে সেরা মাছ কিনতে </h3>
