@@ -27,7 +27,6 @@ nav{
 .primary-btn:hover{
     background-color: #1da1d1;
     transform: scale(1.02);
-    transition: 0.5s;
 }
 .navbar-brand img{
     width: 85px ;
@@ -163,3 +162,16 @@ input:focus {
     margin: auto;
     padding-bottom: 25px;
   }
+/* footer section */
+.bangla-font-footer{
+    font-family: var(--bangla-font);
+    font-size: 20px;
+    border-bottom: 1px solid #4b4848 !important;
+}
+.footer-links a{
+    text-decoration: none;
+}
+.footer-links a:hover{
+    color: #1eb5ea !important;
+    transform: scale(1.5) !important;
+}

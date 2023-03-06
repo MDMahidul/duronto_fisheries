@@ -1,3 +1,9 @@
+<?php
+
+    include_once 'db.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,70 +40,92 @@
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-2">
             <!-- Content -->
-            <h4 class="text-uppercase fw-bold mb-4">
+            <h4 class="text-uppercase fw-bold mb-2 bangla-font">
             <img src="img/ficon.png" width="80px" alt="" class="mb-2">দুরন্ত ফিশারিজ
             </h4>
             <p class="bangla-font">
                 ক্রেতার সন্তুষ্টি অর্জনই আমাদের একমাত্র লক্ষ্য। আপনাদের হাতে সেরা পণ্য টি তুলে দিতে আমাদের নিরালস চেষ্টা। সেরা পণ্য এবং সেরা সেবা পেতা আমদের সাথেই থাকুন। 
             </p>
+            <h4 class=" bangla-font ">সামাজিক যোগাযোগের মাধ্যম</h4>
+            <div class="social-icons ">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
           </div>
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2 footer-links">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
+            <h6 class="text-uppercase fw-bold mb-2 bangla-font-footer">
+              আমাদের পণ্য সমূহ
             </h6>
             <p>
-              <a href="#!" class="text-reset">Angular</a>
+              <a href="#!" class="text-reset bangla-font footer-link">রুই</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">React</a>
+              <a href="#!" class="text-reset bangla-font footer-link">কাতলা</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Vue</a>
+              <a href="#!" class="text-reset bangla-font footer-link">তেলাপিয়া</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Laravel</a>
+              <a href="#!" class="text-reset bangla-font footer-link">কার্প</a>
             </p>
           </div>
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2 footer-links">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
+            <h6 class="text-uppercase fw-bold mb-2 bangla-font-footer">
+              প্রয়োজনীয় লিংক সমূহ
             </h6>
             <p>
-              <a href="#!" class="text-reset">Pricing</a>
+              <a href="#!" class="text-reset  bangla-font ">ঠিকানা</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="#!" class="text-reset  bangla-font ">ব্লগ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset  bangla-font ">শপ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset  bangla-font ">আপনার পরিচয় দিন</a>
             </p>
           </div>
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-2">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            <h6 class="text-uppercase fw-bold mb-2 bangla-font-footer">Contact</h6>
+            <?php
+            $sql2 = "SELECT * FROM contact WHERE id=2";
+            $result2 = mysqli_query($conn, $sql2);
+
+            if(mysqli_num_rows($result2) > 0){
+                while($row = mysqli_fetch_assoc($result2)){
+                    echo "
+                       <div>
+                        <p class='address  bangla-font '><i class='fa-solid fa-house'></i>".$row['address']."</p>
+                        <p class='address  bangla-font '><i class='fa-solid fa-envelope'></i>".$row['email']."</p>
+                        <p class='address  bangla-font '><i class='fa-solid fa-mobile-screen-button'></i>".$row['phone']."</p>
+                        <p class='address  bangla-font '><i class='fa-solid fa-phone'></i>".$row['phone_2']."</p>
+                       </div>
+                    ";
+                  }
+                }else {
+                    echo "0 results";
+                }
+                
+                mysqli_close($conn);
+        ?>
           </div>
           <!-- Grid column -->
         </div>
