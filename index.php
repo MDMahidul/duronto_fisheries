@@ -1,3 +1,9 @@
+<!-- db connection -->
+<?php
+
+include_once 'db.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>home</title>
 </head>
 <body>
@@ -26,8 +33,105 @@
     <!-- slider section -->
     <?php include "sections/slider.php" ?>
 
+    <!-- our best product according to our customers -->
+    <section class="container-fluid  best-sale margin-y" data-aos="slide-right">
+      <div class="text-center">
+        <h2 class="bangla-font mb-5">ক্রেতার চাহিদা অনুযায়ী আমাদের সেরা পণ্য সমূহ</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4 padding-x">
+        <?php
+            $sqlp = "SELECT * FROM products LIMIT 4";
+            $resultp = mysqli_query($conn, $sqlp);
+
+            if(mysqli_num_rows($resultp) > 0){
+                while($row = mysqli_fetch_assoc($resultp)){
+                    echo "<div class='col'>
+                            <div class='card products'>
+                                <div class='text-center'>
+                                <img src=".$row['p_img']." class='card-img-top h-75' alt='...' >
+                                </div>
+                                <div class='card-body'>
+                                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                                    <form action='order.php' method='post'>
+                                    <input type='hidden' name='id' value='".$row['id']."'/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>";
+            }
+                }else {
+                    echo "0 results";
+                }
+        ?>
+        </div>
+      </div>
+    </section>
+
+    <!-- buy fishes -->
+    <section class="container-fluid  best-sale mt-5 margin-y" data-aos="slide-left">
+      <div class="">
+        <h2 class="bangla-font mb-5 text-center">আপনার পছন্দের মাছ কিনুন</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4 padding-x">
+        <?php
+            $sqlb = "SELECT * FROM products ORDER BY RAND() LIMIT 4";
+            $resultb = mysqli_query($conn, $sqlb);
+
+            if(mysqli_num_rows($resultb) > 0){
+                while($row = mysqli_fetch_assoc($resultb)){
+                    echo "<div class='col'>
+                            <div class='card products'>
+                                <div class='text-center'>
+                                <img src=".$row['p_img']." class='card-img-top h-75' alt='...' >
+                                </div>
+                                <div class='card-body'>
+                                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                                    <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
+                                    <form action='order.php' method='post'>
+                                    <input type='hidden' name='id' value='".$row['id']."'/>
+                                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>";
+            }
+                }else {
+                    echo "0 results";
+                }
+        ?>
+        </div>
+        <div class="text-center"><button class="btn primary-btn mt-4" onclick="location.href = 'shop.php';">আরো দেখুন</button></div>
+      </div>
+    </section>   
     
-    
+  <!-- photo gallery -->
+    <section class="container-fluid  mt-5 margin-y" data-aos="slide-up">
+      <h2 class="bangla-font mb-5 text-center">ছবির গ্যালারি</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-2 padding-x image-container mb-5">
+        <?php
+              $sqlg = "SELECT * FROM photo_gallery ORDER BY RAND() LIMIT 4";
+              $resultg = mysqli_query($conn, $sqlg);
+
+              if(mysqli_num_rows($resultg) > 0){
+                  while($row = mysqli_fetch_assoc($resultg)){
+                      echo "<div class='col'>
+                              <div class='card'>
+                                  <div class='text-center image'>
+                                  <img src=".$row['src']." class='card-img-top w-90 ' alt='...' >
+                                  </div>
+                              </div>
+                          </div>";
+              }
+                  }else {
+                      echo "0 results";
+                  }
+          ?>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="" alt="">
+        </div>
+      </div>
+      <div class="text-center"><button class="btn primary-btn mt-3" onclick="location.href = 'gallery.php';">আরো দেখুন</button></div>
+    </section>
+      
 
     <!-- footer section -->
     <?php include "sections/footer.php" ?>
@@ -36,6 +140,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- MDB JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 200, duration: 400, once:true });
+
+    /* js for photo gallery */
+    document.querySelectorAll('.image-container img').forEach(image=>{
+      image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src= image.getAttribute('src'); 
+      }
+    });
+    document.querySelector('.popup-image').onclick= ()=>{
+      document.querySelector('.popup-image').style.display = 'none';
+    }
+  </script>
   </body>
 </body>
 </html>

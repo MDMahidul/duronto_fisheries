@@ -60,6 +60,10 @@
   .banner-header{
     font-size: 14px;
   }
+  .padding-x{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
 }
 
 @media only screen and (max-width:768px){
@@ -81,6 +85,13 @@
       .banner-des{
         font-size: 12px;
       }
+      .padding-x{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .image-container .popup-image img{
+      width: 95%;
+  }
 }
 
 @media only screen and (max-width:576px){
@@ -106,4 +117,8 @@
       .banner-des{
         font-size: 12px;
       }
+      .padding-x{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
 }

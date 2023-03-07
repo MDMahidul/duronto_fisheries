@@ -6,14 +6,6 @@ include_once 'db.php';
 ?>
 
 <?php include "sections/header.php" ?>
-<!--toasts msg -->
-
-
-<!-- Modal -->
-
-<!-- Flexbox container for aligning the toasts -->
-
-<!-- end -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +27,14 @@ include_once 'db.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>contact us</title>
 </head>
 <body>
  
 <section class="contact-section container mb-5">
     <h1 class="text-center my-5 pt-5 page-header">আমাদের সাথে যোগাযোগ করুন</h1>
-    <div class="row">
+    <div class="row" data-aos="slide-right">
     <div class="col-md-4 col-12 con-header contact mb-3">
       <h4 class="border-bottom page-subheader" id="con-header">অফিসে যোগাযোগের ঠিকানা</h4>
     <?php
@@ -111,7 +104,7 @@ include_once 'db.php';
     </div>
     </div>
 </section>
-<section class="container main-address mb-5">
+<section class="container main-address mb-5" data-aos="slide-left">
   <div class="mt-5">
      <h5 class="page-subheader border-bottom ">দুরন্ত ফিশারিজের ঠিকানা</h5>
      <?php
@@ -150,7 +143,9 @@ include_once 'db.php';
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 200, duration: 400, once:true });
+  </script>
   </body>
-</body>
 </html>

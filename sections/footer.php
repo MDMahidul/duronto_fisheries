@@ -28,14 +28,9 @@
 <body>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
   
     <!-- Section: Links  -->
-    <section class="">
+    <section class="pt-2 mt-2">
       <div class="container-fluid text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -46,7 +41,7 @@
             <img src="img/ficon.png" width="80px" alt="" class="mb-2">দুরন্ত ফিশারিজ
             </h4>
             <p class="bangla-font">
-                ক্রেতার সন্তুষ্টি অর্জনই আমাদের একমাত্র লক্ষ্য। আপনাদের হাতে সেরা পণ্য টি তুলে দিতে আমাদের নিরালস চেষ্টা। সেরা পণ্য এবং সেরা সেবা পেতা আমদের সাথেই থাকুন। 
+                ক্রেতার সন্তুষ্টি অর্জনই আমাদের একমাত্র লক্ষ্য। আপনাদের হাতে সেরা পণ্য টি তুলে দিতে আমাদের নিরালস চেষ্টা। সেরা পণ্য এবং সেরা সেবা পেতা আমাদের সাথেই থাকুন। 
             </p>
             <h5 class=" bangla-font fw-bold">সামাজিক যোগাযোগ মাধ্যম</h5>
             <div class="social-icons ">

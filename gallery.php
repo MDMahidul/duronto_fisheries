@@ -1,11 +1,9 @@
 <!-- db connection -->
 <?php
 
-    include_once 'db.php';
+include_once 'db.php';
 
 ?>
-
-<?php include "sections/header.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,49 +24,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>shop</title>
+    <title>home</title>
 </head>
 <body>
-    <section class="container-fluid mb-5">
-      <h1 class="text-center mt-5 pt-5 page-header">মাছ কিনুন</h1>
-        <div class=" row row-cols-1 row-cols-md-3 g-4 padding-x">
-            <?php
-            $sql = "SELECT * FROM products";
-            $result = mysqli_query($conn, $sql);
-            
-            if(mysqli_num_rows($result) > 0){
-                while($row = mysqli_fetch_assoc($result)){
-                    echo "<div class='col'>
-                    <div class='card products'>
-                    <div class='text-center'>
-                    <img src=".$row['p_img']." class='card-img-top h-75' alt='...' >
-                    </div>
-                    <div class='card-body'>
-                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
-                    <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>
-                    <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
-                    <form action='order.php' method='post'>
-                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
-                    <input type='hidden' name='id' value='".$row['id']."'/>
-                    </form>
-                    </div>
-                    </div>
-                    </div>";
-                }
-            }else {
-                echo "0 results";
-            }
-            ?>
-    </div>
-</section>
+  <!-- header section -->
+    <?php include "sections/header.php" ?>
+   
+  <!-- photo gallery -->
+    <section class="container-fluid margin-y" data-aos="slide-up">
+      <h1 class="text-center page-header">ছবির গ্যালারি</h1>
+      <div class="row row-cols-1 row-cols-md-4 g-2 padding-x image-container mb-5">
+        <?php
+              $sqlg = "SELECT * FROM photo_gallery";
+              $resultg = mysqli_query($conn, $sqlg);
 
+              if(mysqli_num_rows($resultg) > 0){
+                  while($row = mysqli_fetch_assoc($resultg)){
+                      echo "<div class='col'>
+                              <div class='card'>
+                                  <div class='text-center image'>
+                                  <img src=".$row['src']." class='card-img-top w-90 ' alt='...' >
+                                  </div>
+                              </div>
+                          </div>";
+              }
+                  }else {
+                      echo "0 results";
+                  }
+          ?>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="" alt="">
+        </div>
+      </div>
+   
+    </section>
+      
 
-<?php include "sections/footer.php" ?>
+    <!-- footer section -->
+    <?php include "sections/footer.php" ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- MDB JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 200, duration: 400, once:true });
+
+    /* js for photo gallery */
+    document.querySelectorAll('.image-container img').forEach(image=>{
+      image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src= image.getAttribute('src'); 
+      }
+    });
+    document.querySelector('.popup-image').onclick= ()=>{
+      document.querySelector('.popup-image').style.display = 'none';
+    }
+  </script>
   </body>
 </body>
 </html>

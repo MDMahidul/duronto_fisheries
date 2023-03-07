@@ -1,4 +1,5 @@
 <title>about us</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <?php include "sections/header.php" ?>
 
     <?php include "sections/header.php" ?>
