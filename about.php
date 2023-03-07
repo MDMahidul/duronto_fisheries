@@ -1,4 +1,4 @@
-
+<title>about us</title>
     <?php include "sections/header.php" ?>
 
     <?php include "sections/header.php" ?>

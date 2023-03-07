@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>About us</title>
+    <title></title>
 </head>
 <body>
 <!-- Footer -->
@@ -48,7 +48,7 @@
             <p class="bangla-font">
                 ক্রেতার সন্তুষ্টি অর্জনই আমাদের একমাত্র লক্ষ্য। আপনাদের হাতে সেরা পণ্য টি তুলে দিতে আমাদের নিরালস চেষ্টা। সেরা পণ্য এবং সেরা সেবা পেতা আমদের সাথেই থাকুন। 
             </p>
-            <h4 class=" bangla-font ">সামাজিক যোগাযোগের মাধ্যম</h4>
+            <h5 class=" bangla-font fw-bold">সামাজিক যোগাযোগ মাধ্যম</h5>
             <div class="social-icons ">
               <i class="fa-brands fa-facebook"></i>
               <i class="fa-brands fa-instagram"></i>
@@ -63,7 +63,7 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2 footer-links">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-2 bangla-font-footer">
-              আমাদের পণ্য সমূহ
+              আমাদের সেরা পণ্য সমূহ
             </h6>
             <p>
               <a href="#!" class="text-reset bangla-font footer-link">রুই</a>
@@ -135,9 +135,8 @@
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-4 bangla-font" style="background-color: rgba(0, 0, 0, 0.05);">
+    Copyright © 2023 All Right Reserved
     </div>
     <!-- Copyright -->
   </footer>

@@ -175,3 +175,12 @@ input:focus {
     color: #1eb5ea !important;
     transform: scale(1.5) !important;
 }
+.fa-brands{
+    color: #1eb5ea !important;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.fa-brands:hover{
+    color: #1e95c0 !important;
+    transform: scale(1.05);
+}

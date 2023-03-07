@@ -1,11 +1,11 @@
-<?php include "sections/header.php" ?>
 <!-- db connection -->
 <?php
 
-    include_once 'db.php';
+include_once 'db.php';
 
 ?>
 
+<?php include "sections/header.php" ?>
 <!--toasts msg -->
 
 
@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>About us</title>
+    <title>contact us</title>
 </head>
 <body>
  
@@ -115,11 +115,11 @@
   <div class="mt-5">
      <h5 class="page-subheader border-bottom ">দুরন্ত ফিশারিজের ঠিকানা</h5>
      <?php
-            $sql2 = "SELECT * FROM contact WHERE id=2";
-            $result2 = mysqli_query($conn, $sql2);
+            $sql3 = "SELECT * FROM contact WHERE id=2";
+            $result3 = mysqli_query($conn, $sql3);
 
-            if(mysqli_num_rows($result2) > 0){
-                while($row = mysqli_fetch_assoc($result2)){
+            if(mysqli_num_rows($result3) > 0){
+                while($row = mysqli_fetch_assoc($result3)){
                     echo "
                        <div>
                         <p class='address'><i class='fa-solid fa-location-dot'></i>".$row['address']."</p>
@@ -132,8 +132,6 @@
                 }else {
                     echo "0 results";
                 }
-                
-                mysqli_close($conn);
         ?>
   </div>
 </section>

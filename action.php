@@ -34,10 +34,15 @@ if(isset($_POST['submit'])){
     $name = $_POST['c_name'];
     $mail   = $_POST['c_mail'];
     $phone = $_POST['c_phone'];
+    $to = "islammoon0006@gmail.com";
+    $subject = "Mail From website";
+    $txt ="Name : ". $name . "\r\n  Email : " . $mail . "\r\n Phone Number : " . $phone;
+    $headers = "From: noreply@yoursite.com" . "\r\n";
     /* validation check */
     if($name != "" && $mail != "" && $phone != ""){ 
       $sql3 = "INSERT INTO customer_info values('','$name','$mail','$phone')";
       $data = mysqli_query($conn,$sql3);
+      mail($to,$subject,$txt,$headers);
       if($data){?>
 
         <script>
