@@ -45,8 +45,8 @@
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){
                     echo "
-                    <li><a class='dropdown-item' href='fishdes.php'>".$row['p_name']."</a></li>
-                    <form action='order.php' method='post'>
+                    <li><a class='dropdown-item' href='fishdes.php?id=".$row['id']."'>".$row['p_name']."</a></li>
+                    <form action='#' method='post'>
                     <input type='hidden' name='id' value='".$row['id']."'/>
                     </form>";
                 }

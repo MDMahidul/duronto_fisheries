@@ -66,7 +66,7 @@
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){
                     echo "
-                    <p><a class='text-reset bangla-font footer-link' href='fishdes.php'>".$row['p_name']."</a></p>
+                    <p><a class='text-reset bangla-font footer-link' href='fishdes.php?id=".$row['id']."'>".$row['p_name']."</a></p>
                     <form action='order.php' method='post'>
                     <input type='hidden' name='id' value='".$row['id']."'/>
                     </form>";
