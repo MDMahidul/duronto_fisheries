@@ -78,7 +78,7 @@ include_once 'db.php';
     </div>
   </div>
 </nav>
-  <section class="container pt-5">
+  <section class="container pt-5 mb-5">
   <?php
         if(isset($_GET['id'])) {
           $id = $_GET['id'];
@@ -89,7 +89,29 @@ include_once 'db.php';
       if(isset($row)) {
         echo "
           <div class='text-center'>
-          <h1 class='page-header'>".$row['p_name']."</h1>
+            <h1 class='page-header'>".$row['p_name']."</h1>
+          </div>
+          <div class='fish-details card mb-3'>
+            <div class='row g-0'>
+            
+                <div class='col-md-5 align-self-center pe-2'>
+                    <img src=".$row['p_img']." class='img-fluid' alt='".$row['p_name']."' >
+                </div>
+                <div class='col-md-7'>
+                  <div class='card-body'>
+                    <h3 class='card-title border-bottom bangla-font mb-3'>বিস্তারিত তথ্যঃ </h3>
+                    <p class='card-text'>".$row['p_des_short']."</p>
+                    <p class='card-text text-justify'>".$row['p_des_details']."</p>
+                    <p class='card-text'><b>মাছের আকারঃ </b>".$row['p_size']."</p>
+                    <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
+                    <form action='order.php' method='post'>
+                      <button class='btn primary-btn' type='submit' name='order' value='Order Now' onclick='location.href = 'order.php';'/>অর্ডার করুন</button>
+                      <input type='hidden' name='id' value='".$row['id']."'/>
+                    </form>
+                  </div>
+                </div>
+              
+            <div>
           </div>
         ";
     }

@@ -40,7 +40,8 @@ nav{
 .navbar-nav  li a{
     color: #4b4848;
     font-weight: bold;
-    margin-left: 45px;
+    margin-left: 45px; 
+    font-size: 20px;
 }
 .navbar-nav  li a:hover{
     color: #1eb5ea;
@@ -86,7 +87,6 @@ nav{
 .products .card-text{
     font-family: var(--bangla-font) !important;
     font-weight: 500;
-    
 }
 .products .card-title {
     color: #1da1d1 !important;
@@ -163,6 +163,9 @@ input:focus {
     padding-bottom: 25px;
   }
 /* footer section */
+footer{
+    background-color: #000 !important;
+}
 .bangla-font-footer{
     font-family: var(--bangla-font);
     font-size: 20px;
@@ -249,4 +252,12 @@ input:focus {
 }
 .products:hover{
     box-shadow: 5px 1px 5px 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* fish details page */
+.fish-details{
+    padding: 45px 75px 35px 15px;
+}
+.fish-details .card-text{
+    text-align: justify;
 }

@@ -99,7 +99,7 @@ include_once 'db.php';
                 }
         ?>
         </div>
-        <div class="text-center"><button class="btn primary-btn mt-4" onclick="location.href = 'shop.php';">আরো দেখুন</button></div>
+        <div class="text-center"><button class="btn primary-btn mt-5" onclick="location.href = 'shop.php';">আরো দেখুন</button></div>
       </div>
     </section>   
     

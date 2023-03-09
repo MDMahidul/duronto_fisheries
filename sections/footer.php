@@ -27,7 +27,7 @@
 </head>
 <body>
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start text-light  mt-5">
   
     <!-- Section: Links  -->
     <section class="pt-2 mt-2">
@@ -38,7 +38,7 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-2">
             <!-- Content -->
             <h4 class="text-uppercase fw-bold mb-2 bangla-font">
-            <img src="img/ficon.png" width="80px" alt="" class="mb-2">দুরন্ত ফিশারিজ
+            <img src="img/logo2.png" width="60px" alt="" class="mb-2 me-2">দুরন্ত ফিশারিজ
             </h4>
             <p class="bangla-font">
                 ক্রেতার সন্তুষ্টি অর্জনই আমাদের একমাত্র লক্ষ্য। আপনাদের হাতে সেরা পণ্য টি তুলে দিতে আমাদের নিরালস চেষ্টা। সেরা পণ্য এবং সেরা সেবা পেতা আমাদের সাথেই থাকুন। 
@@ -133,7 +133,7 @@
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4 bangla-font" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-4 bangla-font border-top" style="background-color: rgba(0, 0, 0, 0.05);">
     Copyright © 2023 All Right Reserved
     </div>
     <!-- Copyright -->
