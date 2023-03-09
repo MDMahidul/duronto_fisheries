@@ -247,3 +247,6 @@ input:focus {
     width: 50%;
     object-fit: cover;
 }
+.products:hover{
+    box-shadow: 5px 1px 5px 1px rgba(0, 0, 0, 0.1) !important;
+}

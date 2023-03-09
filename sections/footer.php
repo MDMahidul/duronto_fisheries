@@ -60,18 +60,21 @@
             <h6 class="text-uppercase fw-bold mb-2 bangla-font-footer">
               আমাদের সেরা পণ্য সমূহ
             </h6>
-            <p>
-              <a href="#!" class="text-reset bangla-font footer-link">রুই</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset bangla-font footer-link">কাতলা</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset bangla-font footer-link">তেলাপিয়া</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset bangla-font footer-link">কার্প</a>
-            </p>
+            <?php
+            $sql = "SELECT * FROM products LIMIT 4";
+            $result = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "
+                    <p><a class='text-reset bangla-font footer-link' href='fishdes.php'>".$row['p_name']."</a></p>
+                    <form action='order.php' method='post'>
+                    <input type='hidden' name='id' value='".$row['id']."'/>
+                    </form>";
+                }
+            }else {
+                echo "0 results";
+            }
+            ?>
           </div>
           <!-- Grid column -->
   
@@ -82,16 +85,16 @@
               প্রয়োজনীয় লিংক সমূহ
             </h6>
             <p>
-              <a href="#!" class="text-reset  bangla-font ">ঠিকানা</a>
+              <a href="contact.php" class="text-reset  bangla-font ">ঠিকানা</a>
             </p>
             <p>
               <a href="#!" class="text-reset  bangla-font ">ব্লগ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset  bangla-font ">শপ</a>
+              <a href="shop.php" class="text-reset  bangla-font ">শপ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset  bangla-font ">আপনার পরিচয় দিন</a>
+              <a href="gallery.php" class="text-reset  bangla-font ">ছবি গ্যালারি</a>
             </p>
           </div>
           <!-- Grid column -->

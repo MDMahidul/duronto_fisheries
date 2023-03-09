@@ -31,7 +31,7 @@
 <body>
     <section class="container-fluid mb-5">
       <h1 class="text-center mt-5 pt-5 page-header">মাছ কিনুন</h1>
-        <div class=" row row-cols-1 row-cols-md-3 g-4 padding-x">
+        <div class=" row row-cols-1 row-cols-md-3 g-4 padding-x" data-aos="slide-up">
             <?php
             $sql = "SELECT * FROM products";
             $result = mysqli_query($conn, $sql);
@@ -48,7 +48,7 @@
                     <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>
                     <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
                     <form action='order.php' method='post'>
-                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
+                    <button class='btn primary-btn' type='submit' name='order' value='Order Now' onclick='location.href = 'order.php';'/>অর্ডার করুন</button>
                     <input type='hidden' name='id' value='".$row['id']."'/>
                     </form>
                     </div>
@@ -69,6 +69,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- MDB JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 200, duration: 400, once:true });
+        /* go to page top on page reload */
+        if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+        } else {
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
   </body>
 </body>
 </html>

@@ -4,9 +4,6 @@
 include_once 'db.php';
 
 ?>
-
-<?php include "sections/header.php" ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +25,10 @@ include_once 'db.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>contact us</title>
+    <title>contact</title>
 </head>
 <body>
- 
+<?php include "sections/header.php" ?>
 <section class="contact-section container mb-5">
     <h1 class="text-center my-5 pt-5 page-header">আমাদের সাথে যোগাযোগ করুন</h1>
     <div class="row" data-aos="slide-right">
@@ -87,7 +84,7 @@ include_once 'db.php';
               </tr>
               <tr>
                 <td class="lable-right">
-                  <label for="formGroupExampleInput2" class="form-label fw-bold">মোবাইল নাম্বারঃ</label>
+                  <label for="formGroupExampleInput2" class="form-label fw-bold ">মোবাইল নাম্বারঃ</label>
                 <td>
                   <input type="text" class="form-input-field" id="formGroupExampleInput2" placeholder="আপনার মোবাইল নাম্বার লিখুন" name="c_phone" required pattern="[0-1]{2}[0-9]{9}">
                 </td>
@@ -146,6 +143,14 @@ include_once 'db.php';
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 200, duration: 400, once:true });
+    /* go to page top on page reload */
+    if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+    } else {
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    }
   </script>
   </body>
 </html>

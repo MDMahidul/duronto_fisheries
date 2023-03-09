@@ -24,15 +24,15 @@ include_once 'db.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>home</title>
+    <title>gallery</title>
 </head>
 <body>
   <!-- header section -->
     <?php include "sections/header.php" ?>
    
   <!-- photo gallery -->
-    <section class="container-fluid margin-y" data-aos="slide-up">
-      <h1 class="text-center page-header">ছবির গ্যালারি</h1>
+    <section class="container-fluid" data-aos="slide-up">
+      <h1 class="text-center mt-5 pt-5 page-header">ছবি গ্যালারি</h1>
       <div class="row row-cols-1 row-cols-md-4 g-2 padding-x image-container mb-5">
         <?php
               $sqlg = "SELECT * FROM photo_gallery";
@@ -82,6 +82,14 @@ include_once 'db.php';
     });
     document.querySelector('.popup-image').onclick= ()=>{
       document.querySelector('.popup-image').style.display = 'none';
+    }
+    /* go to page top on page reload */
+    if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+    } else {
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
     }
   </script>
   </body>

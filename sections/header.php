@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,12 +39,21 @@
             Categories
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Rui</a></li>
-            <li><a class="dropdown-item" href="#">Katla</a></li>
-            <li><a class="dropdown-item" href="#">Silver Carp</a></li>
-            <li><a class="dropdown-item" href="#">Tilapia</a></li>
-            <li><a class="dropdown-item" href="#">Kalibaus</a></li>
-            <li><a class="dropdown-item" href="#">Hilsa</a></li>
+            <?php
+            $sql = "SELECT * FROM products";
+            $result = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "
+                    <li><a class='dropdown-item' href='fishdes.php'>".$row['p_name']."</a></li>
+                    <form action='order.php' method='post'>
+                    <input type='hidden' name='id' value='".$row['id']."'/>
+                    </form>";
+                }
+            }else {
+                echo "0 results";
+            }
+            ?>
           </ul>
         </li>
         <li class="nav-item">

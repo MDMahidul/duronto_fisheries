@@ -7,7 +7,7 @@
             <h3 class="banner-header">সাশ্রয়ী দামে সেরা মাছ কিনতে </h3>
             <h1 class="banner-subheader">আজই যোগাযোগ করুন আমাদের সাথে </h1>
             <h5 class="banner-des"><i class="fa-solid fa-phone me-2"></i> +8809611-600500</h5>
-            <button class="btn primary-btn btn-text" onclick="location.href = 'contact.html';">BUY NOW</button>
+            <button class="btn primary-btn btn-text" onclick="location.href = 'shop.php';">অর্ডার করুন</button>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
@@ -16,7 +16,7 @@
             <h3 class="banner-header">সাশ্রয়ী দামে সেরা মাছ কিনতে </h3>
             <h1 class="banner-subheader">আজই যোগাযোগ করুন আমাদের সাথে </h1>
             <h5 class="banner-des"><i class="fa-solid fa-phone me-2"></i> +8809611-600500</h5>
-            <button class="btn primary-btn btn-text" onclick="location.href = 'contact.html';">BUY NOW</button>
+            <button class="btn primary-btn btn-text" onclick="location.href = 'shop.php';">অর্ডার করুন</button>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
@@ -25,7 +25,7 @@
             <h3 class="banner-header">সাশ্রয়ী দামে সেরা মাছ কিনতে </h3>
             <h1 class="banner-subheader">আজই যোগাযোগ করুন আমাদের সাথে </h1>
             <h5 class="banner-des"><i class="fa-solid fa-phone me-2"></i> +8809611-600500</h5>
-            <button class="btn primary-btn btn-text" onclick="location.href = 'contact.html';">BUY NOW</button>
+            <button class="btn primary-btn btn-text" onclick="location.href = 'shop.php';">অর্ডার করুন</button>
         </div>  
       </div>
     </div>

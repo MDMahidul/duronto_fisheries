@@ -85,9 +85,10 @@ include_once 'db.php';
                                 <div class='card-body'>
                                     <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
                                     <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
+                                    <p class='card-text'><b>মাছের আকারঃ </b>".$row['p_size']."</p>
                                     <form action='order.php' method='post'>
                                     <input type='hidden' name='id' value='".$row['id']."'/>
-                                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/>অর্ডার করুন</button>
+                                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/ onclick='location.href = 'gallery.php';'>অর্ডার করুন</button>
                                     </form>
                                 </div>
                             </div>
@@ -154,6 +155,14 @@ include_once 'db.php';
     });
     document.querySelector('.popup-image').onclick= ()=>{
       document.querySelector('.popup-image').style.display = 'none';
+    }
+    /* go to page top on page reload */
+    if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+    } else {
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
     }
   </script>
   </body>
