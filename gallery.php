@@ -32,7 +32,7 @@ include_once 'db.php';
    
   <!-- photo gallery -->
     <section class="container-fluid" data-aos="slide-up">
-      <h1 class="text-center mt-5 pt-5 page-header">ছবি গ্যালারি</h1>
+      <h1 class="text-center page-header">ছবি গ্যালারি</h1>
       <div class="row row-cols-1 row-cols-md-4 g-2 padding-x image-container mb-5">
         <?php
               $sqlg = "SELECT * FROM photo_gallery";

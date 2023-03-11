@@ -29,56 +29,8 @@ include_once 'db.php';
 </head>
 <body>
 <!-- navbar -->
-<nav class=" navbar navbar-expand-lg fixed-top bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="img/ficon.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav  ms-auto">
-        <li class="nav-item">
-          <a class="nav-link"  href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="shop.php">Shop</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categories
-          </a>
-          <ul class="dropdown-menu">
-            <?php
-            $sql = "SELECT * FROM products";
-            $result = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($result) > 0){
-                while($row = mysqli_fetch_assoc($result)){
-                    echo "
-                    <li><a class='dropdown-item' href='fishdes.php?id=".$row['id']."'>".$row['p_name']."</a></li>
-                    <form action='#' method='post'>
-                    <input type='hidden' name='id' value='".$row['id']."'/>
-                    </form>";
-                }
-            }else {
-                echo "0 results";
-            }
-            ?>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link disabled text-dark" href="#"><i class="fa-solid fa-phone me-2"></i>+8809611-600500</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  <section class="container pt-5 mb-5">
+<?php include "sections/header.php" ?>
+  <section class="container mb-5">
   <?php
         if(isset($_GET['id'])) {
           $id = $_GET['id'];
@@ -120,6 +72,7 @@ include_once 'db.php';
   </section>
     
     <?php include "sections/footer.php" ?>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 200, duration: 400, once:true });
@@ -132,6 +85,5 @@ include_once 'db.php';
         }
     }
   </script>
-  </body>
 </body>
 </html>

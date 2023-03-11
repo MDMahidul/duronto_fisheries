@@ -29,7 +29,7 @@ include_once 'db.php';
 <body>
     <?php include "sections/header.php" ?>
     <section class="container mb-5">
-    <h1 class="text-center mt-5 pt-5 page-header">আমাদের সম্পর্কে জানুন</h1>
+    <h1 class="text-center page-header">আমাদের সম্পর্কে জানুন</h1>
     <div  data-aos="slide-up">
     <p class="about-text mb-5">বাংলাদেশ (এই শব্দ সম্পর্কেশুনুন) দক্ষিণ এশিয়ার একটি সার্বভৌম রাষ্ট্র। বাংলাদেশের সাংবিধানিক নাম গণপ্রজাতন্ত্রী বাংলাদেশ। ভৌগোলিকভাবে বাংলাদেশের পশ্চিমে ভারতের পশ্চিমবঙ্গ, উত্তরে পশ্চিমবঙ্গ, আসাম ও মেঘালয়, পূর্ব সীমান্তে আসাম, ত্রিপুরা ও মিজোরাম, দক্ষিণ-পূর্ব সীমান্তে মিয়ানমারের চিন ও রাখাইন রাজ্য এবং দক্ষিণ উপকূলের দিকে বঙ্গোপসাগর অবস্থিত।[১০] ভৌগোলিকভাবে পৃথিবীর বৃহত্তম ব-দ্বীপের সিংহভাগ অঞ্চল জুড়ে বাংলাদেশ ভূখণ্ড অবস্থিত। জনসংখ্যার বিবেচনায় ১৬ কোটির অধিক মানুষ নিয়ে বাংলাদেশ বিশ্বের ৮ম বৃহত্তম দেশ।[১১] নদীমাতৃক বাংলাদেশ ভূখণ্ডের উপর দিয়ে বয়ে গেছে ৫৭টি আন্তর্জাতিক নদী। বাংলাদেশের উত্তর-পূর্বে ও দক্ষিণ-পূর্বে টারশিয়ারি যুগের পাহাড় ছেয়ে আছে। বিশ্বের বৃহত্তম ম্যানগ্রোভ অরণ্য সুন্দরবন ও দীর্ঘতম প্রাকৃতিক সৈকত কক্সবাজার সমুদ্র সৈকত বাংলাদেশে অবস্থিত।
 
@@ -41,8 +41,10 @@ include_once 'db.php';
     
     <?php include "sections/footer.php" ?>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- MDB JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js" ></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
