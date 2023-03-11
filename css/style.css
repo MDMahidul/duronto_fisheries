@@ -6,7 +6,10 @@
 /* design navebar */
 nav{
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-    padding: 0px 50px 0px 50px !important;
+    padding: 10px 50px 10px 50px !important;
+}
+a{
+    text-decoration: none;
 }
 .contact-section{
     margin-bottom: 80px !important;
@@ -41,7 +44,7 @@ nav{
     color: #4b4848;
     font-weight: bold;
     margin-left: 45px; 
-    font-size: 20px;
+    /* font-size: 18px; */
 }
 .navbar-nav  li a:hover{
     color: #1eb5ea;
@@ -148,8 +151,8 @@ form{
     border-radius: 0px;
     box-shadow: none !important;
 }
- input::placeholder .contact-form{
-    color: #4b4848;
+ input::placeholder{
+    color: #7a79799f ;
 }
 input:focus {
     outline: none;
@@ -260,4 +263,9 @@ footer{
 }
 .fish-details .card-text{
     text-align: justify;
+}
+/* order page */
+.order-section{
+    padding-left: 150px;
+    padding-right: 150px;
 }

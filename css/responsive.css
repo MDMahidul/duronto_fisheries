@@ -23,7 +23,7 @@
       }
       .carousel-inner .carousel-caption{
         background-color: #b4afaf8c;
-        padding: 10px;
+        padding: 8px;
         border-radius: 5px;
     }
     .banner-header{
@@ -31,42 +31,46 @@
         margin-bottom: 5px;
     }
     .banner-subheader{
-        font-size: 20px;
+        font-size: 16px;
     }
     .banner-des{
-    font-size: 14px;
+    font-size: 12px;
     }
- 
+
 }
 
 @media only screen and (max-width:991px){
     nav{
       padding: 0px 10px 0px 10px !important;
-  }
+    }
 
-  .navbar-nav  li a{
-    margin-left: 0px !important;
-    margin-bottom: 10px;
+    .navbar-nav  li a{
+      margin-left: 0px !important;
+      margin-bottom: 10px;
+    }
+    .dropdown-menu{
+      margin-left: 0px !important;
+    }
+    .banner-subheader{
+      font-size: 20px;
+    }
+    .banner-des{
+      font-size: 12px;
+    }
+    .banner-header{
+      font-size: 14px;
+    }
+    .padding-x{
+      padding-left: 5px !important;
+      padding-right: 5px !important;
   }
-  .dropdown-menu{
-    margin-left: 0px !important;
+  /* fish details page */
+  .fish-details{
+    padding: 5px 15px 5px;
   }
-  .banner-subheader{
-    font-size: 20px;
-  }
-  .banner-des{
-    font-size: 16px;
-  }
-  .banner-header{
-    font-size: 14px;
-  }
-  .padding-x{
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-}
-/* fish details page */
-.fish-details{
-  padding: 5px 15px 5px;
+  .order-section{
+    padding-left: 30px;
+    padding-right: 30px;
 }
 }
 
@@ -96,6 +100,10 @@
     .image-container .popup-image img{
       width: 95%;
   }
+  .order-section{
+    padding-left: 30px;
+    padding-right: 30px;
+}
 }
 
 @media only screen and (max-width:576px){
@@ -111,11 +119,11 @@
         border-radius: 5px;
     }
     .banner-header{
-        font-size: 14px;
-        margin-bottom: -5px;
+        font-size: 12px;
+        /* margin-bottom: -5px; */
       }
     .banner-subheader{
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: -5px;
       }
       .banner-des{
@@ -125,4 +133,8 @@
         padding-left: 5px !important;
         padding-right: 5px !important;
     }
+    .order-section{
+      padding-left: 30px;
+      padding-right: 30px;
+  }
 }

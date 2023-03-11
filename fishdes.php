@@ -105,7 +105,8 @@ include_once 'db.php';
                     <p class='card-text'><b>মাছের আকারঃ </b>".$row['p_size']."</p>
                     <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
                     <form action='order.php' method='post'>
-                      <button class='btn primary-btn' type='submit' name='order' value='Order Now' onclick='location.href = 'order.php';'/>অর্ডার করুন</button>
+                    <a class='btn primary-btn' type='submit' name='order' href = 'order.php?id=".$row['id']."'/>অর্ডার করুন</a>
+                    <input type='hidden' name='id' value='".$row['id']."'/>
                       <input type='hidden' name='id' value='".$row['id']."'/>
                     </form>
                   </div>

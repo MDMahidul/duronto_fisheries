@@ -47,10 +47,11 @@ include_once 'db.php';
                     echo "<div class='col'>
                             <div class='card products'>
                                 <div class='text-center'>
-                                <img src=".$row['p_img']." class='card-img-top h-75' alt='...' >
+                                
+                                <a class='text-reset' href='fishdes.php?id=".$row['id']."'><img src=".$row['p_img']." class='card-img-top h-75' alt='...' ></a>
                                 </div>
                                 <div class='card-body'>
-                                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                                    <h5 class='card-title fw-bold '><a class='text-reset' href='fishdes.php?id=".$row['id']."'>".$row['p_name']."</a></h5>
                                     <form action='order.php' method='post'>
                                     <input type='hidden' name='id' value='".$row['id']."'/>
                                     </form>
@@ -83,12 +84,12 @@ include_once 'db.php';
                                 <img src=".$row['p_img']." class='card-img-top h-75' alt='...' >
                                 </div>
                                 <div class='card-body'>
-                                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                                   <h5 class='card-title fw-bold '><a class='text-reset' href='fishdes.php?id=".$row['id']."'>".$row['p_name']."</a></h5>
                                     <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
                                     <p class='card-text'><b>মাছের আকারঃ </b>".$row['p_size']."</p>
                                     <form action='order.php' method='post'>
                                     <input type='hidden' name='id' value='".$row['id']."'/>
-                                    <button class='btn primary-btn' type='submit' name='order' value='Order Now'/ onclick='location.href = 'gallery.php';'>অর্ডার করুন</button>
+                                    <a class='btn primary-btn' type='submit' name='order' href = 'order.php?id=".$row['id']."'/>অর্ডার করুন</a>
                                     </form>
                                 </div>
                             </div>

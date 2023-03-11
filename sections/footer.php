@@ -30,7 +30,7 @@
 <footer class="text-center text-lg-start text-light  mt-5">
   
     <!-- Section: Links  -->
-    <section class="pt-2 mt-2">
+    <section class="pt-2 mt-2 px-3">
       <div class="container-fluid text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">

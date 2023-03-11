@@ -86,7 +86,7 @@ include_once 'db.php';
                 <td class="lable-right">
                   <label for="formGroupExampleInput2" class="form-label fw-bold ">মোবাইল নাম্বারঃ</label>
                 <td>
-                  <input type="text" class="form-input-field" id="formGroupExampleInput2" placeholder="আপনার মোবাইল নাম্বার লিখুন" name="c_phone" required pattern="[0-1]{2}[0-9]{9}">
+                  <input type="text" class="form-input-field" id="formGroupExampleInput2" placeholder="মোবাইল নাম্বার লিখুন" name="c_phone" required pattern="[0-1]{2}[0-9]{9}">
                 </td>
               </tr>
               <tr class="text-center">
@@ -112,10 +112,10 @@ include_once 'db.php';
                 while($row = mysqli_fetch_assoc($result3)){
                     echo "
                        <div>
-                        <p class='address'><i class='fa-solid fa-location-dot'></i>".$row['address']."</p>
-                        <p class='address'><i class='fa-solid fa-envelope'></i>".$row['email']."</p>
-                        <p class='address'><i class='fa-solid fa-mobile-screen-button'></i>".$row['phone']."</p>
-                        <p class='address'><i class='fa-solid fa-phone'></i>".$row['phone_2']."</p>
+                        <p class='address bangla-font'><i class='fa-solid fa-location-dot'></i>".$row['address']."</p>
+                        <p class='address  bangla-font'><i class='fa-solid fa-envelope'></i>".$row['email']."</p>
+                        <p class='address  bangla-font'><i class='fa-solid fa-mobile-screen-button'></i>".$row['phone']."</p>
+                        <p class='address  bangla-font'><i class='fa-solid fa-phone'></i>".$row['phone_2']."</p>
                        </div>
                     ";
                   }

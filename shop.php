@@ -44,11 +44,12 @@
                     <img src=".$row['p_img']." class='card-img-top h-75' alt='...' >
                     </div>
                     <div class='card-body'>
-                    <h5 class='card-title fw-bold '>".$row['p_name']."</h5>
+                    <h5 class='card-title fw-bold '><a class='text-reset' href='fishdes.php?id=".$row['id']."'>".$row['p_name']."</a></h5>
                     <p class='card-text'><b>বিবরণঃ </b>".$row['p_des_short']."</p>
+                    <p class='card-text'><b>মাছের আকারঃ </b>".$row['p_size']."</p>
                     <p class='card-text'><b>দামঃ </b>".$row['p_price_per_kg']." টাকা প্রতি কে.জি.</p>
                     <form action='order.php' method='post'>
-                    <button class='btn primary-btn' type='submit' name='order' value='Order Now' onclick='location.href = 'order.php';'/>অর্ডার করুন</button>
+                    <a class='btn primary-btn' type='submit' name='order' href = 'order.php?id=".$row['id']."'/>অর্ডার করুন</a>
                     <input type='hidden' name='id' value='".$row['id']."'/>
                     </form>
                     </div>
