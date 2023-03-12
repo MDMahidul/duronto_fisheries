@@ -102,7 +102,7 @@ include_once 'db.php';
     </div>
 </section>
 <section class="container main-address mb-5" data-aos="slide-left">
-  <div class="mt-5">
+  <div class="mt-5 px-2">
      <h5 class="page-subheader border-bottom ">দুরন্ত ফিশারিজের ঠিকানা</h5>
      <?php
             $sql3 = "SELECT * FROM contact WHERE id=2";

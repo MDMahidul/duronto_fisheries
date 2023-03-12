@@ -53,8 +53,8 @@ include_once 'db.php';
       if($data){?>
 
         <script>
-           new swal({ title: "আপনার অর্ডার টি সম্পূর্ণ জন্য ধন্যবাদ!",
-            text: "আমাদের প্রতিনিধি দ্রুতই আপনার সাথে যোগাযোগ করবে",
+           new swal({ title: "আপনার অর্ডার টি সম্পূর্ণ করার জন্য ধন্যবাদ!",
+            text: "আমাদের প্রতিনিধি দ্রুত আপনার সাথে যোগাযোগ করবে",
             type: "success"}).then(okay => {
             if (okay) {
                 window.location.href = "index.php";

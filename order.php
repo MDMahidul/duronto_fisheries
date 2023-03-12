@@ -53,7 +53,7 @@ include_once 'db.php';
                           <label for='formGroupExampleInput' class='form-label fw-bold'>মাছের নামঃ</label>
                         </td>
                         <td>
-                          <input type='text' class='form-input-field' id='formGroupExampleInput' name='p_name' required value='".$row['p_name']."'>
+                          <input type='text' class='form-input-field' id='formGroupExampleInput' name='p_name' required value='".$row['p_name']."' readonly>
                         </td>
                       </tr>
                       <tr>
@@ -61,7 +61,7 @@ include_once 'db.php';
                           <label for='formGroupExampleInput' class='form-label fw-bold'>মাছের আকারঃ</label>
                         </td>
                         <td>
-                          <input type='text' class='form-input-field' id='formGroupExampleInput' name='p_size' required value='".$row['p_size']."'>
+                          <input type='text' class='form-input-field' id='formGroupExampleInput' name='p_size' required value='".$row['p_size']."' readonly>
                         </td>
                       </tr>
                       <tr>
@@ -69,7 +69,7 @@ include_once 'db.php';
                           <label for='formGroupExampleInput' class='form-label fw-bold'>প্রতি কেজি দামঃ </label>
                         </td>
                         <td>
-                          <input type='text' class='form-input-field' id='formGroupExampleInput' name='p_price_per_kg' required value='".$row['p_price_per_kg']."'>
+                          <input type='text' class='form-input-field' id='formGroupExampleInput' name='p_price_per_kg' required value='".$row['p_price_per_kg']."' readonly>
                         </td>
                       </tr>
                       <tr>
