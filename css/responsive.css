@@ -114,19 +114,20 @@
   .contact-section{
     padding: 0px 20px 15px 20px !important;
 }
-    .carousel-container {
-        height: 100%; 
-        width: 80%; 
-      }
+.carousel-inner {
+  height: 100% !important; /* adjust the height to your desired value */
+  width: 95% !important; /* adjust the width to your desired value */
+}
       .carousel-inner .carousel-caption{
         margin-bottom: 7px;
     }
+    
     .banner-header{
-        font-size: 16px;
+        font-size: 14px;
         /* margin-bottom: -5px; */
       }
     .banner-subheader{
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: -5px;
       }
       .banner-des{

@@ -1,6 +1,6 @@
 <div id="demo" class="carousel slide mx-auto" data-bs-ride="carousel">
     <!-- The slideshow/carousel -->
-    <div class="carousel-inner w-75 mx-auto">
+    <div class="carousel-inner  mx-auto">
       <div class="carousel-item active" data-bs-interval="2000">
         <img src="img/slider1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
         <div class="carousel-caption ">

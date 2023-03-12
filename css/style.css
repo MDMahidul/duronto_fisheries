@@ -68,9 +68,12 @@ a{
 }
 
 /* slider */
-.carousel-container {
-    max-width: 78% !important; 
+.carousel-inner {
+    width: 75% !important;
 }
+/* .carousel-container {
+    max-width: 78% !important; 
+} */
 .banner-header,.banner-subheader{
     font-family: var(--bangla-font);
 }
@@ -80,8 +83,9 @@ a{
     /* padding: 100px; */
     border-radius: 5px;
 }
-
-
+.carousel-control-prev,.carousel-control-next{
+    display: none !important;
+}
 /* shop page design */
 .products .card-title,.card-text{
     font-family: var(--bangla-font) !important;
